@@ -1,0 +1,13 @@
+[Unit]
+Description=ELIADE UPS monitoring daemon
+
+[Service]
+ExecStart=/home/eliade/UPSMonitor/daemon.sh
+Restart=always
+Type=simple
+User=eliade
+WorkingDirectory=/home/eliade/UPSMonitor
+
+[Install]
+WantedBy=multi-user.target
+
