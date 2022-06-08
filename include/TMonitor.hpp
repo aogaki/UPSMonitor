@@ -32,11 +32,12 @@ class UPSInfo
 
   void Dump()
   {
-    std::cout << "Remaining time: " << remainingTime << "\n"
+    std::cout << "Server name: " << serverName << "\n"
+              << "IP address: " << address << "\n"
+              << "Remaining time: " << remainingTime << "\n"
               << "Is Healthy: " << isHealthy << "\n"
               << "Timestamp: " << timeStamp << "\n"
-              << "Server name: " << serverName << "\n"
-              << "IP address: " << address << std::endl;
+              << std::endl;
   };
 };
 
@@ -56,7 +57,8 @@ class DBInfo
   void Dump()
   {
     std::cout << "IP address: " << address << "\n"
-              << "Port: " << port << std::endl;
+              << "Port: " << port << "\n"
+              << std::endl;
   };
 };
 
@@ -72,6 +74,8 @@ class TMonitor
 
   void FetchData();
   void PostData();
+
+  void Test();
 
  private:
   void ParseParameters(std::string parFileName);
